@@ -11,7 +11,7 @@
   </head>
   <body>
     <main class="bg-secondary h-100">
-      <aside class="bg-primary w-20 h-100 p-2">
+      <aside class="bg-primary w-20 h-100 p-2 overflow-auto position-fixed">
         <h1 class="text-center text-white text-xl mt-3">
           Gabriel de Oliveira Pontarolo
         </h1>
@@ -19,51 +19,61 @@
 
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
-            <a class="nav-link text-white" href="www.google.com">Início</a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown show">
-              <a
-                class="nav-link text-white dropdown-toggle"
-                href="#"
-                role="button"
-                id="dropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Matérias
-              </a>
-              <div
-                class="dropdown-menu text-white"
-                aria-labelledby="dropdownMenuLink"
-              >
-                <a class="dropdown-item text-white" href="#">Action</a>
-                <a class="dropdown-item text-white" href="#">Another action</a>
-              </div>
-            </div>
+            <a class="nav-link text-white active" href="#home">Início</a>
           </li>
 
-          <li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#about">Sobre</a>
+          </li>
+
+          <li class="nav-item dropdown">
             <a
-              class="text-white nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle text-white"
               data-bs-toggle="dropdown"
               href="#"
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
-              >Dropdown</a
+              >Matérias</a
             >
-            <div class="dropdown-menu text-white">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">CI1010</a>
+              <a class="dropdown-item" href="#">CMA202</a>
+              <a class="dropdown-item" href="#">CI1002</a>
             </div>
           </li>
-          <li>
-            <div class="bg-yelow w-20 h-20"></div>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#contact">Contato</a>
           </li>
         </ul>
       </aside>
+
+      <article class="ms-20-p p-1 h-auto">
+        <section>
+          <h2>Fixed Full-height Side Nav</h2>
+          <h3>
+            Try to scroll this area, and see how the sidenav sticks to the page
+          </h3>
+          <p>
+            Notice that this div element has a left margin of 25%. This is
+            because the side navigation is set to 25% width. If you remove the
+            margin, the sidenav will overlay/sit on top of this div.
+          </p>
+          <p>
+            Also notice that we have set overflow:auto to sidenav. This will add
+            a scrollbar when the sidenav is too long (for example if it has over
+            50 links inside of it).
+          </p>
+          <p>Some text..</p>
+          <p>Some text..</p>
+          <p>Some text..</p>
+          <p>Some text..</p>
+          <p>Some text..</p>
+          <p>Some text..</p>
+          <p>Some text..</p>
+        </section>
+      </article>
     </main>
   </body>
 </html>
