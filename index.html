@@ -20,9 +20,9 @@
             </h1>
             <hr class="h1 border-secondary border-5 m-3 mt-5 mb-5" />
 
-            <ul id="sidemenu" class="nav nav-pills p-2 h-50 flex-column">
+            <ul id="sidemenu" role="tablist" class="nav nav-pills p-2 h-50 flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" role="tab" href="#home" data-toggle="tab">
+                    <a class="nav-link" href="#home" id="nav-home-tab" role="tab" data-bs-toggle="tab">
                         <h3 class="h3 text-white text-lg-start">
                             <i class="bi bi-house"></i> Início
                         </h3>
@@ -30,7 +30,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" role="tab" href="#formation" data-toggle="tab">
+                    <a class="nav-link" href="#formation" id="nav-formation-tab" role="tab" data-bs-toggle="tab">
                         <h3 class="h3 text-white text-lg-start">
                             <i class="bi bi-journals"></i> Formação
                         </h3>
@@ -38,7 +38,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" role="tab" href="#projects" data-toggle="tab">
+                    <a class="nav-link" href="#projects" id="nav-projects-tab" role="tab" data-bs-toggle="tab">
                         <h3 class="h3 text-white text-lg-start">
                             <i class="bi bi-kanban-fill"></i> Projetos
                         </h3>
@@ -46,7 +46,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" role="tab" href="#links" data-toggle="tab">
+                    <a class="nav-link" href="#links" id="nav-links-tab" role="tab" data-bs-toggle="tab">
                         <h3 class="h3 text-white text-lg-start">
                             <i class="bi bi-link"></i> Links Externos
                         </h3>
@@ -54,7 +54,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" role="tab" href="#contact" data-toggle="tab">
+                    <a class="nav-link" href="#contact" id="nav-contacts-tab" role="tab" data-bs-toggle="tab">
                         <h3 class="h3 text-white text-lg-start">
                             <i class="bi bi-telephone"></i> Contato
                         </h3>
@@ -71,7 +71,7 @@
 
         <section class="tab-content p-5 h-auto ms-20-p">
 
-            <div id="home" class="tab-pane active" role="tabpanel">
+            <div id="home" class="tab-pane fade show active" aria-labelledby="nav-home-tab" role="tabpanel">
                 <article class="me-3 ms-3">
                     <h2 class="h2">
                         Início
@@ -85,7 +85,7 @@
                 </article>
             </div>
 
-            <div id="formation" class="tab-pane" role="tabpanel">
+            <div id="formation" class="tab-pane fade" aria-labelledby="nav-formation-tab" role="tabpanel">
                 <article class="me-3 ms-3">
                     <h2 class="h2 mb-4">
                         Formação
@@ -118,17 +118,85 @@
                 </article>
             </div>
 
-            <div id="projects" class="tab-pane" role="tabpanel">
+            <div id="projects" class="tab-pane fade" aria-labelledby="nav-projects-tab" role="tabpanel">
                 <article class="me-3 ms-3">
-                    <h2 class="h2">
+                    <h2 class="h2 mb-3">
                         Projetos
                     </h2>
+                    <div class="accordion" id="projetos">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="h-dezmente">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dezmente" aria-expanded="true" aria-controls="dezmente">
+                                    Aplicativo de percepção de deficit cognitivo - Dezmente
+                                </button>
+                            </h2>
+                            <div id="dezmente" class="accordion-collapse collapse" aria-labelledby="h-dezmente" data-bs-parent="#projetos">
+                                <div class="accordion-body">
+                                    Projeto de iniciação científica sob a orientação do Prof. Dr. Eduardo Todt, como parte do trabalho de conclusão de curso da graduanda em mediciona Isabele Ayumi. Consiste da implementação em um aplicativo mobilo do teste <strong>Montereal Cognitive Assessment (MoCA)</strong>,
+                                    com o objetivo de auxiliar na detecção de declinío cognitivo leve em idosos. Construído com o framework mobile <strong><a href="http://flutter.dev">Flutter</a></strong> para a linguagem de programação <strong><a href="http://dart.dev">Dart</a></strong>.
+                                    <br> <br>
 
+                                    <strong class="text-danger">Em progresso</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="h-boulderdash">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Boulder Dash
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="h-boulderdash" data-bs-parent="#projetos">
+                                <div class="accordion-body">
+                                    Trabalho para a aprovação parcial na matéria <strong>Programação II (CI1002)</strong> do curso de Bacharelado em Ciência da Computação da UFPR. Implementação do jogo Boulder Dash feita em C utilizando a biblioteca gráfica
+                                    <strong><a href="https://liballeg.org/">Allegro</a></strong> e o repositório aberto de mídia <strong><a href="https://opengameart.org">Open Game Art</a></strong>. <br><br>
 
+                                    <strong class="text-success">Concluído</strong><br><br>
+
+                                    <a href="https://github.com/Gabp0/boulder-dash"><strong>Link para o repositório no Github.</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="h-fotomosaico">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fotomosaico" aria-expanded="false" aria-controls="fotomosaico">
+                                    Fotomosaico
+                                </button>
+                            </h2>
+                            <div id="fotomosaico" class="accordion-collapse collapse" aria-labelledby="h-fotomosaico" data-bs-parent="#projetos">
+                                <div class="accordion-body">
+                                    Trabalho para a aprovação parcial na matéria <strong>Programação II (CI1002)</strong> do curso de Bacharelado em Ciência da Computação da UFPR. Criador de fotomosaicos escrito na linguagem C. <br><br>
+
+                                    <strong class="text-success">Concluído</strong><br><br>
+
+                                    <a href="https://github.com/Gabp0/foto-mosaico"><strong>Link para o repositório no Github.</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="h-paginadinf">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paginadinf" aria-expanded="false" aria-controls="paginadinf">
+                                    Página Pessoal
+                                </button>
+                            </h2>
+                            <div id="paginadinf" class="accordion-collapse collapse" aria-labelledby="h-paginadinf" data-bs-parent="#projetos">
+                                <div class="accordion-body">
+                                    Feita inicialmente como trabalho para a aprovação parcial na matéria <strong>Programação Web (CI1010)</strong> do curso de Bacharelado em Ciência da Computação da UFPR. Essa mesma página sendo visualizada nesse momento.
+                                    Feita com
+                                    <strong>HTML</strong> e o framework <strong><a href="https://getbootstrap.com">Bootstrap</a></strong> para <strong>CSS</strong>.
+                                    <br><br>
+
+                                    <strong class="text-warning">Em alteração constante</strong><br><br>
+
+                                    <a href="https://github.com/Gabp0/pagina-dinf"><strong>Link para o repositório no Github.</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
 
-            <div id="links" class="tab-pane" role="tabpanel">
+            <div id="links" class="tab-pane fade" aria-labelledby="nav-links-tab" role="tabpanel">
                 <article class="me-3 ms-3">
                     <h2 class="h2">
                         Links Externos
@@ -139,22 +207,44 @@
                 </article>
             </div>
 
-            <div id="contact" class="tab-pane" role="tabpanel">
+            <div id="contact" class="tab-pane fade" aria-labelledby="nav-contacts-tab" role="tabpanel">
                 <article class="me-3 ms-3">
-                    <h2 class="h2">
+                    <h2 class="h2 mb-3">
                         Contato
                     </h2>
-                    <p class="text-primary">
-                        Em construção
-                    </p>
+                    <div class="mb-5 w-35 d-flex justify-content-between">
+                        <div>
+                            <i class="bi bi-envelope"></i>
+                            <label for="professionalEmail">Email profissional</label>
+                        </div>
+                        <b id="professionalEmail" class="align-content-le fw-bold">gop20@inf.ufpr.br</b>
+                    </div>
+
+                    <form action="">
+                        <h4 class="h4">Envie uma mensagem</h4>
+                        <div class="form-group">
+                            <label for="emailAdress" class="form-label mt-4">Endereço de email</label>
+                            <input type="email" class="form-control" id="emailAdress" placeholder="Digite seu endereço de email">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailSubject" class="form-label mt-4">Assunto</label>
+                            <input type="text" class="form-control" id="emailSubject" placeholder="Assunto do email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailContent" class="form-label mt-4">Mensagem</label>
+                            <textarea class="form-control" id="emailContent" rows="10" placeholder="Conteúdo do email"></textarea>
+                        </div>
+                        <button type="" class="btn btn-primary">Enviar</button>
+                    </form>
                 </article>
             </div>
 
         </section>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
